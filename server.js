@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require("./node_modules/express");
 const cors = require("cors");
 
 const app = express();
@@ -16,9 +16,9 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳')
-})
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
 
 require("./app/routes/betest.routes")(app);
 
