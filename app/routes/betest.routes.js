@@ -11,6 +11,12 @@ module.exports = app => {
   
     // Retrieve a single data with id
     router.get("/:id", betests.findOne);
+
+    // Retrieve a single data with account
+    router.get("/account/:accountNumber", betests.findOneAccount);
+    
+    // Retrieve a single data with account
+    router.get("/identity/:identityNumber", betests.findOneIdentity);
   
     // Update a data with id
     router.put("/:id", betests.update);
